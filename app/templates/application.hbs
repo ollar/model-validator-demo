@@ -1,7 +1,14 @@
-{{page-title "Abbbr"}}
-
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
-
+{{page-title "Application"}}
 {{outlet}}
+
+<form {{on 'submit' this.submit}}>
+    <div>
+        <input type="text" name="username" value={{this.model.username}} />
+    </div>
+
+    <div>
+        <input type="text" name="password" value={{this.model.password}} />
+    </div>
+
+    <button type='submit'>ok</button>
+</form>
